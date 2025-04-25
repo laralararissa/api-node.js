@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Catálogo de Produtos</h1>
+            <div class="filter-container">
+                <select id="category-filter">
+                    <option value="all">Todas as categorias</option>
+                    <option value="Eletrônicos">Eletrônicos</option>
+                    <option value="Computadores">Computadores</option>
+                    <option value="Acessórios">Acessórios</option>
+                    <option value="Periféricos">Periféricos</option>
+                </select>
+                <button id="filter-button">Filtrar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Carregando produtos...</p>
+        </div>
+        
+        <div id="error-message" class="hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Erro ao carregar os produtos. Por favor, tente novamente mais tarde.</p>
+            <button id="retry-button">Tentar novamente</button>
+        </div>
+        
+        <div id="products-container" class="products-grid"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Catálogo de Produtos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
